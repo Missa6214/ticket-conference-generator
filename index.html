@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Conference ticket generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <img src="assets/images/pattern-lines.svg" alt="" class="pattern-lines">
+  <img src="assets/images/pattern-circle.svg" alt="" class="pattern-circle">
+  <img src="assets/images/pattern-squiggly-line-top.svg" alt="" class="pattern-squiggly-line-top">
+  <img src="assets/images/pattern-circle.svg" alt="" class="pattern-circle1">
+ <picture>
+  <source srcset="assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg" media="(max-width: 600px)">
+  <img src="assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="" class="pattern-squiggly-line-bottom-desktop">
+</picture>
+
+
+  <div class="hero">
+    <div class="logo">
+        <img src="assets/images/logo-full.svg" alt="logo">
+    </div>
+      
+   <h1 class="title">Your Journey to Coding Conf <br> 2025 Starts Here!</h1>
+   <p class="sous-title">Secure your spot at next year's biggest coding conference.</p>
+
+  <form action="" id="form">
+    <div class="champ">
+      <label >Upload Avatar</label>
+      <label class="img-field" for="input-file">
+          <input type="file"  accept="image/jpeg,image/png" id="input-file" hidden>
+          <div class="uploaded-img">
+              <img src="assets/images/icon-upload.svg" alt="icon-upload" class="icon-upload">
+          </div>
+          <p class="dragOver">Drag and drop or click to upload</p>
+          <div class="modificationImage removed">
+              <label class="removeImage">Remove image</label>
+              <label for="input-file" class="changeImage">Change image</label>
+          </div>
+      </label>
+      <p class="limit_upload"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg> <span>Upload your photo (JPG or PNG, max size: 500KB). </span></p>
+    </div>
+    <div class="champ">
+        <label for="fName">Full Name</label>
+        <input type="text" name="full name" id="fName">
+    </div>
+     <div class="champ">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email"  placeholder="example@email.com">
+        <p class="email_input removed" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg> <span>Please enter a valid email address</span></p>
+
+    </div>
+     <div class="champ">
+        <label for="gUsername">GitHub Username</label>
+        <input type="text" name="email" id="gUsername" placeholder="@yourusername">
+    </div>
+    <input type="submit" value="Generate My Ticket" id="submit">
+      
+  </form> 
+  </div>
+   
+</body>
+</html>

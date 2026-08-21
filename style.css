@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Inconsolata";
+    src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf) format('truetype');
+    font-weight: 400 800;
+    font-display: swap;
+}
+img{
+    max-width: 100%;
+}
+
+
+body{
+    font-family: 'Inconsolata';
+    background-image: 
+    url(assets/images/background-desktop.png);
+    color: white;
+    padding: 1.5rem 1.2rem;
+    position: relative;
+   overflow-x: hidden;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.logo{
+    margin-bottom: 2rem;
+    
+}
+.logo img{
+    width: 80%;
+}
+
+.hero h1, .sous-title, .img-field p{
+    text-align: center;
+} 
+.sous-title{
+    margin: 1.5rem 0;
+}
+form{
+    margin-top: .5rem;
+    display: grid;
+    gap: 20px;
+    width: 25%;
+    min-width: 350px;
+}
+
+.champ{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.champ input{
+    background-color: hsla(252, 6%, 83%, .1);
+    border: 1px solid hsla(0, 0%, 100%, .5);
+    color: white;
+}
+
+
+.champ input, #submit{
+    border-radius: 10px;
+    padding: .7rem;
+    outline: none;
+    font-size: .8rem;
+}
+
+.img-field{
+    outline: 0;
+    border: 1px dashed hsla(0, 0%, 100%, .5);
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    background-color: hsla(252, 6%, 83%, .1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modificationImage{
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 10px;
+}
+
+#submit{
+    background-color: hsl(7, 88%, 67%);
+    color: hsl(248, 70%, 10%);
+    border: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.champ label{
+    font-size: .9rem;
+}
+.limit_upload, .email_input{
+    display: flex;
+    align-items: center;
+    font-size: .6rem;
+    gap: 5px;
+}
+
+
+.limit_upload svg{
+    width: 15px;
+}
+
+.pattern-lines, 
+.pattern-circle,
+.pattern-squiggly-line-top,
+.pattern-circle1,
+.pattern-squiggly-line-bottom-desktop{
+    position: absolute;
+    z-index: -1000;
+}
+
+.pattern-lines{
+    position: absolute;
+    top: 0;
+}
+.pattern-circle{
+    top: -90px;
+    left: 90px;
+}
+.pattern-squiggly-line-top{
+    top: 60px;
+    right: 0;
+}
+.pattern-circle1{
+    top: 90px
+}
+.pattern-circle1{
+    top: 50%;
+    right: 200px;
+}
+.pattern-squiggly-line-bottom-desktop{
+    bottom: 0;
+    left: 0;
+    max-width: 700px;
+}
+.uploaded-img{
+    width: 12%;
+    height: 40px;
+    padding: .5rem .2rem;
+    border: 1px solid hsla(0, 0%, 100%, .5);
+    background-color: hsla(252, 6%, 83%, .2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.added{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.uploaded-img img{
+    width: 22px;
+}
+
+.removed{
+    display: none;
+}
+
+
+.invalid{
+    color: #e16151;
+}
+
+.hidden{
+    display: none;
+}
+
+.img-field p{
+    margin-top: .5rem;
+}
+.email_input{
+    color: #e16151;
+}
+.champ.invalid-email{
+    border-color: 1px solid #e16151;
+}
+
+.removeImage, .changeImage{
+    background-color: hsla(252, 6%, 83%, .2);
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    color: white;
+    padding: .4rem .6rem;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.img-field:focus,
+#fName:focus, #email:focus, #gUsername:focus{
+    border: 1px solid hsl(0, 0%, 100%);
+}
+.img-field,
+#fName, #email, #gUsername{
+    cursor: pointer;
+}
+
+
+/* Invitation Bloc */
+
+.sous-title{
+    max-width: 25rem;
+    line-height: 1.5;
+}
+
+.ticket{
+    margin-top: 3rem;
+    position: relative;
+    width: 30rem;
+    max-width: 25rem;
+    height: 10rem;
+    padding: 1rem 3rem;
+    background-image: url("assets/images/pattern-ticket.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.user-details{
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}  
+
+.username{
+   background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+   background-clip: text;
+   -webkit-background-clip: text;
+    color: transparent;
+}
+.email_address{
+    color: hsla(7, 88%, 67%);
+}
+
+.event-info,
+.user_info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.event-info{
+    align-items: start;
+}
+.userImage{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 13%;
+    height: 40px;
+}
+
+.logo-mark{
+    width: 1.7rem;
+    margin-top: .2rem;
+}
+.conf-title{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.conf-details{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.conf-date,
+.userGithubBloc{
+    font-size: .8rem;
+}
+.sous-title,
+.conf-date,
+.userGithubBloc{
+    color: hsl(252, 6%, 83%) ;
+}
+.userGithubBloc{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+}
+.githubIcon{
+    width: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .pattern-circle,
+    .pattern-circle1{
+        display: none;
+    }
+
+    .pattern-squiggly-line-top{
+        width: 100px;
+    }
+    .pattern-squiggly-line-bottom-desktop{
+        width: 250px;
+    }
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px){
+    .pattern-circle,
+    .pattern-circle1{
+        width: 20%;
+        max-width: 200px;
+    }
+    .pattern-squiggly-line-top{
+        width: 300px;
+    }
+     .pattern-squiggly-line-bottom-desktop{
+        width: 480px;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+}
